@@ -23,6 +23,9 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+# node-waf configuration
+.lock-wscript
+
 # Bower dependency directory (https://bower.io/)
 bower_components
 
@@ -35,6 +38,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+.idea
 
 # Typescript v1 declaration files
 typings/
@@ -67,3 +71,8 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Bundle stats
+bundle-stats.json
+
+tailwind.custom.css
