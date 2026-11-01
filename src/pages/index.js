@@ -38,7 +38,7 @@ const Content = styled(ParallaxLayer)`
   ${tw('p-6 md:p-12 lg:p-24 justify-center items-center flex z-50')};
 `;
 const Hero = styled.div`
-  ${tw('w-full xl:w-2/3')};
+  ${tw('w-full xl:w-3/4')};
 `;
 const Inner = styled.div`
   ${tw('w-full xxl:w-2/3 text-center lg:text-left')};
@@ -78,7 +78,7 @@ top: 5px;
 }
 `;
 const Subtitle = styled.p`
-  ${tw('text-2xl lg:text-4xl font-sans text-black mt-8 xxl:w-3/4')};
+  ${tw('text-2xl lg:text-3xl font-sans text-black mt-8')};
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 const ProjectsWrapper = styled.div`
@@ -92,6 +92,18 @@ const ProjectsWrapper = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+  }
+`;
+const CenteredCard = styled.div`
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: flex;
+  width: calc(50% - 2rem);
+  @media (max-width: 1200px) {
+    width: calc(50% - 1.5rem);
+  }
+  @media (max-width: 900px) {
+    width: 100%;
   }
 `;
 const WaveWrapper = styled.div`
@@ -149,7 +161,7 @@ const Index = () => (
           <BigTitle>
             Hi, <br /> I'm Idilsu.
           </BigTitle>
-          <Subtitle>I'm a Business Analyst at McKinsey Company focusing on improving strategy concerns and solutions for financial institutions. I graduated from Brown University in 2022 with a degree in Computer Science and Economics. <br /><br /> Welcome to my online portfolio.  </Subtitle>
+          <Subtitle>I'm a second-year MBA student at Wharton concentrating in Finance and AI. Before Wharton, I was a Senior Business Analyst at McKinsey &amp; Company, focusing on strategy and solutions for financial institutions. I graduated from Brown University in 2022 with a degree in Computer Science and Economics. <br /><br /> <span style={{ position: "relative", top: "110px" }}>Welcome to my online portfolio.</span></Subtitle>
         </Hero>
       </Content>
       <DividerMiddle
@@ -182,11 +194,21 @@ const Index = () => (
               Implemented a Graph utilizing the Prim-Jarnik and PageRank algorithms in Python.  <br /> <br /> Graph is a project developed for Introduction to Algorithms and Data Structures @ Brown University. 
             </ProjectCard>
             <ProjectCard
-              title="This Website"
-              bg="linear-gradient(to right, #00ff84 0%, #00ffea 100%)"
+              title="Deep Learning"
+              link="https://github.com/idilsuguney/finalproject"
+              bg="linear-gradient(to right, #00c96b 0%, #0091ff 100%)"
             >
-              Built this website for my online portfolio using GatsbyJS boilerplate code.
+              Implemented an LSTM sentiment analysis model in TensorFlow, trained on ~40k tweets, and used Granger causality tests to measure the impact of Elon Musk's tweets on Bitcoin, Ethereum, and Dogecoin prices. <br /> <br /> The Effect of Elon Musk's Tweets on the Crypto Market is a project co-developed for Deep Learning @ Brown University.
             </ProjectCard>
+            <CenteredCard>
+              <ProjectCard
+                title="This Website"
+                link="https://github.com/idilsuguney/Personal-website"
+                bg="linear-gradient(to right, #7b2ff7 0%, #f107a3 100%)"
+              >
+                Built this website for my online portfolio using GatsbyJS boilerplate code. <br /> <br /> This website was originally created and published in 2020, and updated in 2024 and 2026.
+              </ProjectCard>
+            </CenteredCard>
           </ProjectsWrapper>
         </Inner>
       </Content>
@@ -198,7 +220,7 @@ const Index = () => (
       />
       <Divider speed={0.1} offset={0.8} factor={2}>
       </Divider>
-      <Content speed={0.2} offset={0.99}>
+      <Content speed={0.2} offset={0.95}>
         <Inner>
           <Title>About</Title>
           <AboutHero>

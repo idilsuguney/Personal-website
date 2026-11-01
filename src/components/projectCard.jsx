@@ -14,11 +14,11 @@ const Wrapper = styled.a`
 `;
 const Title = styled.div`
 ${tw('text-white text-3xl md:text-3xl xl:text-4xl tracking-wide font-sans pt-8')};
-text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
 `;
 const Text = styled.div`
   ${tw('opacity-75 font-sans text-sm md:text-base')};
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
 `;
 const ProjectCard = ({ title, link, children, bg }) => (
   <Wrapper href={link} target="_blank" rel="noopener noreferrer" bg={bg}>
